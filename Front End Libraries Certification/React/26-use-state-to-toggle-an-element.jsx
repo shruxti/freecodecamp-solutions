@@ -9,12 +9,11 @@ class MyComponent extends React.Component {
       // change code above this line
     }
     // change code below this line
-    toggleVisibility(){
-      if(this.state.visibility)
-        this.setState({visibility:false});
-      else
-        this.setState({visibility:true});
-    }
+      toggleVisibility() {
+    this.setState(prevState => ({
+      visibility: !prevState.visibility
+    }));
+  }
     // change code above this line
     render() {
       if (this.state.visibility) {
